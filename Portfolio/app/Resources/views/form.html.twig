@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ titre }}</title>
+    <link rel="stylesheet" href="css.css" />
+</head>
+
+<header>
+<img src=''>
+</header>
+<body>
+    <div id='sidebar'>
+        <ul>
+            <li><h1>sidebar</h1></li>
+            <li><a href='/inscription'>Inscription</a></li>
+            <li><a href='/connexion'>Connexion</a></li>
+            <li><a href=''>recherche</a></li>
+        </ul>
+    </div>
+    <div>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+	ZeroFour by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title> {{ titre }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div class="container">
+
+						<!-- Header -->
+							<header id="header">
+								<div class="inner">
+
+									<!-- Logo -->
+										<h1><a href="/" id="logo">Portfolio</a></h1>
+
+									<!-- Nav -->
+										<nav id="nav">
+											<ul>
+												<li class="current_page_item"><a href="/">Home</a></li>
+												<li>
+													<a href="">Dropdown</a>
+													<ul>
+														<li><a href="#">Lorem ipsum dolor</a></li>
+														<li><a href="#">Magna phasellus</a></li>
+														<li>
+															<a href="#">Phasellus consequat</a>
+															<ul>
+																<li><a href="#">Lorem ipsum dolor</a></li>
+																<li><a href="#">Phasellus consequat</a></li>
+																<li><a href="#">Magna phasellus</a></li>
+																<li><a href="#">Etiam dolore nisl</a></li>
+															</ul>
+														</li>
+														<li><a href="#">Veroeros feugiat</a></li>
+													</ul>
+												</li>
+											</ul>
+										</nav>
+
+								</div>
+							</header>
+
+						<!-- Banner -->
+							<div id="banner">
+								<h2><img src="{{ asset('images/nzitan_q.jpg') }}"> <strong>Quentin Nzitanu:</strong> Développeur Web Junior
+								<br />
+							</div>
+
+					</div>
+				</div>
+
+			<!-- Main Wrapper -->
+				<div id="main-wrapper">
+					<div class="wrapper style1">
+						<div class="inner">
+
+							<!-- Feature 1 -->
+								<section class="container box feature1">
+									<div class="row">
+										<div class="12u">
+											<header class="first major">
+												<h2>Actuellement en recherche d'un Contrat Pro !!</h2>
+												<p>Etudiant au sein du Samsung Campus qui dispense le programme Apps & Web Coding d'Epitech.
+												Je possede les basses de la programmation oriente objet en PHP et Javascript ainsi que de les bases de librairies et framework tel que Symfony, AngularJs, NodeJs et bien d'autre, mais je vous laisse observe ce que j'ai deja fait.</p>
+											</header>
+										</div>
+									</div>
+									{% if projets|length > 2 %}
+									<div class="row">
+									{% endif %}
+									{% for projet in projets %}
+							
+										<div class="4u 12u(mobile)">
+											<section>
+												<a href="{{ projet.path }}" class="image featured"><img src="{{ projet.image }}" alt="apercue"/></a>
+												<h3>{{ projet.nom }}</h3>
+												<p>{{ projet.description }}</p>
+											</section>
+										</div>
+									{% endfor %}
+									{% if projets|length > 2 %}
+									</div>
+									{% endif %}
+						</div>
+					</div>
+
+			<!-- Footer Wrapper -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+								<!-- Contact -->
+							<section>
+								<h2>Contact</h2>
+								<div>
+									<div class="row">
+										<div class="6u 12u(mobile)">
+											<dl class="contact">
+												<dt>Email</dt>
+												<dd><a href="#">quentin.nzitanu@gmail.com</a></dd>
+											</dl>
+										</div>
+										<div class="6u 12u(mobile)">
+											<dl class="contact">
+												<dt>Addresse</dt>
+												<dd>
+													15 Rue des Chantiers<br />
+													93400, Saint-Ouen
+												</dd>
+												<dt>Téléphone</dt>
+												<dd>06 38 11 53 11</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="row">
+							<div class="12u">
+								<div id="copyright">
+									<ul class="menu">
+										<li>&copy; Untitled. All rights reserved</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+
+			<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+			<script src="{{ asset('assets/js/jquery.dropotron.min.js') }}"></script>
+			<script src="{{ asset('assets/js/skel.min.js') }}"></script>
+			<script src="{{ asset('assets/js/skel-viewport.min.js') }}"></script>
+			<script src="{{ asset('assets/js/util.js') }}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{{ asset('assets/js/main.js') }}"></script>
+
+	</body>
+</html>
